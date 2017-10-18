@@ -1,0 +1,116 @@
+{
+  "swagger": {
+    "outputDirectory": "./",
+    "entryFile": "./src/app.ts",
+    "host": "dev.localhost",
+    "version": "0.1.14",
+    "name": "blog-engine",
+    "description": "blog-engine backend api endpoints documentations",
+    "license": "MIT",
+    "basePath": "/api",
+    "securityDefinitions": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "access_token",
+        "in": "query"
+      },
+      "tsoa_auth": {
+        "type": "oauth2",
+        "authorizationUrl": "http://swagger.io/api/oauth/dialog",
+        "flow": "implicit",
+        "scopes": {
+          "write:pets": "modify things",
+          "read:pets": "read things"
+        }
+      }
+    },
+    "spec": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "api_key",
+        "in": "header"
+      },
+      "tsoa_auth": {
+        "type": "oauth2",
+        "authorizationUrl": "http://swagger.io/api/oauth/dialog",
+        "flow": "implicit",
+        "scopes": {
+          "write:pets": "modify things",
+          "read:pets": "read things"
+        }
+      }
+    }
+  },
+  "routes": {
+    "basePath": "/api",
+    "entryFile": "./src/app.ts",
+    "routesDir": "./src/",
+    "middleware": "koa",
+    "middlewareTemplate": ""
+  },
+  "decoratorsSchema": {
+    "controllersDecorators": [
+      {
+        "name": "Route",
+        "tsoaDecorator": "Route"
+      },
+      {
+        "name": "Controller",
+        "tsoaDecorator": "Route"
+      },
+      {
+        "name": "JsonController",
+        "tsoaDecorator": "Route"
+      }
+    ],
+    "methodDecorators": [
+      {
+        "name": "get",
+        "tsoaDecorator": "get"
+      },
+      {
+        "name": "post",
+        "tsoaDecorator": "post"
+      },
+      {
+        "name": "patch",
+        "tsoaDecorator": "patch"
+      },
+      {
+        "name": "delete",
+        "tsoaDecorator": "delete"
+      },
+      {
+        "name": "put",
+        "tsoaDecorator": "put"
+      }
+    ],
+    "parameterDecorators": [
+      {
+        "name": "Request",
+        "tsoaDecorator": "Request"
+      },
+      {
+        "name": "Body",
+        "tsoaDecorator": "Body"
+      },
+      {
+        "name": "BodyProp",
+        "tsoaDecorator": "BodyProp"
+      },
+      {
+        "name": "Header",
+        "tsoaDecorator": "Header"
+      },
+      {
+        "name": "Query",
+        "tsoaDecorator": "Query"
+      },
+      {
+        "name": "Param",
+        "tsoaDecorator": "Path"
+      }
+    ]
+  }
+
+}
