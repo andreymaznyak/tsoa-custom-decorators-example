@@ -1,5 +1,7 @@
 # TSOA CUSTOM DECORATORS EXAMPLE
 ## installation
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/andreymaznyak/tsoa-custom-decorators-example.svg)](https://greenkeeper.io/)
 1. `git clone https://github.com/andreymaznyak/tsoa-custom-decorators-example`  
 1. `npm i` or `yarn`
 ## start
